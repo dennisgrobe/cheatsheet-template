@@ -10,6 +10,15 @@
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{color,graphicx,overpic}
 \usepackage{hyperref}
+\usepackage{settobox} % added by Dennis Grobe
+\usepackage{tcolorbox} % added by Dennis Grobe
+\tcbuselibrary{breakable}
+\newtcolorbox{mybox}{colback=red!5!white,colframe=red!75!black} % added by Dennis Grobe
+\newtcolorbox{gbox}{colback=green!5!white,colframe=red!75!black} % added by Dennis Grobe
+\newtcolorbox{titlebox}[1]{colback=red!5!white,colframe=red!75!black,breakable,fonttitle=\footnotesize\bfseries,title=#1, left*=2.5mm,pad at break=2mm, break at=-\baselineskip/0pt, height fixed for= middle}
+\newtcolorbox{titleboxgreen}[1]{colback=green!5!white,colframe=green!50!black,breakable,fonttitle=\footnotesize\bfseries,title=#1, left*=2.5mm}
+\newtcolorbox{titleboxgreennarrow}[1]{colback=green!5!white,colframe=green!50!black,breakable,fonttitle=\footnotesize\bfseries,title=#1, left*=1mm}
+\newtcolorbox{titleboxnarrow}[1]{colback=red!5!white,colframe=red!75!black,breakable,fonttitle=\footnotesize\bfseries,title=#1, left*=1mm}
 
 % Sets page margins.
 \geometry{top=.2in,left=.2in,right=.2in,bottom=.2in}
@@ -25,13 +34,13 @@
                                 {-0.5ex plus -.5ex minus -.2ex}%
                                 {-0.5\baselineskip}%
                                 {\normalfont\small\bfseries}}
-\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+\renewcommand{\subsection}{\@startsection{subsection}{2}{1.5mm}%
                                 {-0.5ex plus -.5ex minus -.2ex}%
-                                {-0.5\baselineskip}%
+                                {0.4\baselineskip}%
                                 {\normalfont\footnotesize\bfseries}}
-\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{3mm}%
                                 {-0.5ex plus -.5ex minus -.2ex}%
-                                {-0.5\baselineskip}%
+                                {0.4\baselineskip}%
                                 {\normalfont\scriptsize\bfseries}}
 \renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
                                 {-0.5ex plus -.5ex minus -.2ex}%

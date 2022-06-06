@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Ignore unnecessary LaTeX files
+
+*.log
+*.out
+*.aux
+
